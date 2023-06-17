@@ -3,14 +3,16 @@ function verificar() {
     var ano = data.getFullYear()
     var fano = window.document.getElementById('txtano')
     var res = window.document.getElementById('res')
-if (fano.value.length == 0 || fano.value > ano){
+
+        if (fano.value.length == 0 || fano.value > ano){
     alert('[ERRO] Verifique os dados e tente novamente!')
-} else {
-    var fsex = document.getElementsByName('radsex')
-    var idade = ano - Number(fano.value)
-    var genero = ''
-    var img = document.createElement('img')
-    img.setAttribute('id','foto')
+        } else {
+            var fsex = document.getElementsByName('radsex')
+            var idade = ano - Number(fano.value)
+            var genero = ''
+            var img = document.createElement('img')
+            img.setAttribute('id','foto')
+            
     if (fsex[0].checked) {
         genero = 'Homem'
         if(idade >=0 && idade < 10) { //Criança
@@ -69,10 +71,13 @@ if (fano.value.length == 0 || fano.value > ano){
             span.style.color = color;
     }
 
+
     //Validação para impedir numeros unicos no cpf
     function verificarDigitosRepetidos(cpf) {
         return cpf.split('').every((d) => d === cpf[0]);
     }
+
+
     //Verificação de cada digito do cpf
     function calcularDigitoVerificador(cpf, posicao) {
         const sequencia = cpf.slice(0, 8 + posicao).split('');
@@ -91,9 +96,11 @@ if (fano.value.length == 0 || fano.value > ano){
         $('#cpf').inputmask('999.999.999-99');
     });
 
+
+
     function limpaFormatacao(cpf) {
         cpf = cpf.replace(/\D/g, '');
         return cpf;
     }
 
-
+ 
