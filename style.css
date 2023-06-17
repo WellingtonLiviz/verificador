@@ -1,5 +1,6 @@
     body{ 
-            background-color:lightgray;
+            
+            background: linear-gradient(to left,  blueviolet, white,blueviolet);
             font: normal 15pt arial;
             text-align: center; 
     }
@@ -34,10 +35,16 @@
     }
 
     button{
+        letter-spacing: 1.5px;
         padding: 8px 16px;
         border-radius: 5px;
         background-color: blueviolet;
         color: white;
+        transition: .4s;
+    }
+    button:hover{
+        letter-spacing: 4px;
+        background-color: darkviolet;
     }
 
     .footer2{
@@ -51,4 +58,10 @@
         list-style: none;
         display: inline;
     }
-
+    a{
+        color: black;
+    }
+    a:hover{
+        color: blueviolet;
+    }
+   
